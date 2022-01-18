@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en"><head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Welcome!</title>
+  
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="assets/index.1ec1d01f.css">
+
+
+
+
+
+</head>
+
+<body>
+  <div id="vanta-canvas"></div>
+
+  <main>
+    
+
+<header class="desktop__nav astro-DWEN4DNM">
+  <div class="logo astro-DWEN4DNM">
+    <a href="/" class="astro-DWEN4DNM"><span class="astro-DWEN4DNM">VITOR PETRI</span></a>
+
+   <div class="astro-UWKJA72A">
+  <button class="header__button nav-btn-js astro-UWKJA72A" type="button">
+    <!-- MENU -->
+  </button>
+  <nav class="header__nav nav-js astro-UWKJA72A" data-active="false">
+    <!-- <ul class="header__menu">
+      <li class="header__menu-item"><a href="/">Work</a></li>
+      <li class="header__menu-item"><a href="/posts">Posts</a></li>
+      <li class="header__menu-item"><a href="/about">About</a></li>
+    </ul> -->
+    <p class="astro-UWKJA72A">Very cool features coming soon here :o</p>
+    <!-- <img src="/digital-art/art8.png" alt="Image"> -->
+  </nav>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const revealerNav = window.revealer({
+    revealElementSelector: ".nav-js",
+    options: {
+      anchorSelector: ".nav-btn-js",
+    },
+  });
+
+  const actionBtn = document.querySelector(".nav-btn-js");
+  actionBtn.addEventListener("click", () => {
+    if (!revealerNav.isRevealed()) {
+      revealerNav.reveal();
+      actionBtn.setAttribute("data-open", true);
+    } else {
+      revealerNav.hide();
+      actionBtn.setAttribute("data-open", false);
+    }
+  });
+});
+</script>
+
+
+  </div>
+
+  <nav class="astro-DWEN4DNM">
+    <a href="/" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">WORK</span></a>
+    <a href="/posts" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">POSTS</span></a>
+    <a href="/about" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">ABOUT</span></a>
+    <div class="cursor astro-DWEN4DNM"></div>
+  </nav>
+</header>
+
+<script>
+(function () {
+  const link = document.querySelectorAll('nav > .hover-this');
+  const cursor = document.querySelector('.cursor');
+
+  const animateit = function (e) {
+    const span = this.querySelector('span');
+    const { offsetX: x, offsetY: y } = e,
+    { offsetWidth: width, offsetHeight: height } = this,
+
+    move = 25,
+    xMove = x / width * (move * 2) - move,
+    yMove = y / height * (move * 2) - move;
+
+    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+    if (e.type === 'mouseleave') span.style.transform = '';
+  };
+
+  const editCursor = e => {
+    const { clientX: x, clientY: y } = e;
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
+  };
+
+  link.forEach(b => b.addEventListener('mousemove', animateit));
+  link.forEach(b => b.addEventListener('mouseleave', animateit));
+  window.addEventListener('mousemove', editCursor);
+})();
+</script>
+
+
+    <nav class="mobile__nav astro-72ACL2YG">
+  <ul class="astro-72ACL2YG">
+    <li class="astro-72ACL2YG"><a href="/" class="astro-72ACL2YG">WORK</a></li>
+    <li class="astro-72ACL2YG"><a href="/posts" class="astro-72ACL2YG">POSTS</a></li>
+    <li class="astro-72ACL2YG"><a href="/about" class="astro-72ACL2YG">ABOUT</a></li>
+  </ul>
+</nav>
+
+
+    
+    <div class="home__text astro-ZBHKS7OT">
+    <h1 class="home__text__title animate__animated animate__fadeInUp hideMobile astro-ZBHKS7OT">CREATIVE DEVELOPER AND DESIGNER</h1>
+
+    <div class="home__text__description animate__animated animate__fadeInUp animate__delay-1s hideMobile astro-ZBHKS7OT">
+      <span class="home__text__span astro-ZBHKS7OT">
+        Hello!
+      </span>
+
+      <p class="home__text__paragraph hideMobile astro-ZBHKS7OT">
+        Passionate about art, music, and 
+        technology. With this site I want 
+        to share some of my experiences, ideas 
+        and my journey through this world.
+      </p>
+
+      <p class="home__text__paragraph hideDesktop astro-ZBHKS7OT">
+        Hello! Passionate about art, music, and 
+        technology. With this site I want 
+        to share some of my experiences, ideas 
+        and my journey through this world.
+      </p>
+    </div>
+
+    <h1 class="home__text__title animate__animated animate__fadeIn hideDesktop astro-ZBHKS7OT">CREATIVE DEVELOPER AND DESIGNER</h1>
+
+    <div class="home__text__description animate__animated animate__fadeIn hideDesktop astro-ZBHKS7OT">
+      <span class="home__text__span astro-ZBHKS7OT">
+        Hello!
+      </span>
+
+      <p class="home__text__paragraph hideMobile astro-ZBHKS7OT">
+        Passionate about art, music, and 
+        technology. With this site I want 
+        to share some of my experiences, ideas 
+        and my journey through this world.
+      </p>
+
+      <p class="home__text__paragraph hideDesktop astro-ZBHKS7OT">
+        Hello! Passionate about art, music, and 
+        technology. With this site I want 
+        to share some of my experiences, ideas 
+        and my journey through this world.
+      </p>
+    </div>
+  </div><div class="filter animate__animated animate__fadeInUp animate__delay-1s">
+  <ul>
+    <li onclick="toggleWebsites()">
+      <div class="filter__circle webCircle"></div>
+      <div class="filter__inner__circle"></div>
+      Websites
+    </li>
+    <li onclick="toggleDigitalArt()">
+      <div class="filter__circle artCircle"></div>
+      <div class="filter__inner__circle"></div>
+      Digital Art
+    </li>
+    <li onclick="toggleExperiments()">
+      <div class="filter__circle expCircle"></div>
+      <div class="filter__inner__circle"></div>
+      Experiments
+    </li>
+  </ul>
+</div>
+
+<script global="">
+function show(gallery, button) {
+  gallery.style.display = 'flex'
+
+  setTimeout(() => {
+    gallery.style.opacity = '1'
+    gallery.style.transform = 'translateY(0) scale(1)'
+    button.style.backgroundColor = '#fff'
+  })
+}
+
+function hide(gallery, button) {
+  gallery.style.display = 'none'
+
+  setTimeout(() => {
+    gallery.style.opacity = '0'
+    gallery.style.transform = 'translateY(-50%) scale(0)'
+    button.style.backgroundColor = 'transparent'
+  })
+}
+
+function hideAlone(gallery, button) {
+  setTimeout(() => {
+    gallery.style.opacity = '0'
+    gallery.style.transform = 'translateY(50%) scale(0)'
+    button.style.backgroundColor = 'transparent'
+  })
+
+  setTimeout(() => {
+    gallery.style.display = 'none'
+  }, 300)
+}
+
+function toggleFunction(
+  active, 
+  activeCircle,
+  inactiveOne,
+  inactiveCircleOne,
+  inactiveTwo,
+  inactiveCircleTwo
+  ) {
+  show(active, activeCircle)
+  hide(inactiveOne, inactiveCircleOne)
+  hide(inactiveTwo, inactiveCircleTwo)
+}
+
+let isWebActive = false
+let isArtActive = false
+let isExpActive = false
+
+function toggleWebsites() {
+  const websites = document.querySelector('.websites')
+  const webCircle = document.querySelector('.webCircle')
+  const digitalArt = document.querySelector('.digital-art')
+  const artCircle = document.querySelector('.artCircle')
+  const experiments = document.querySelector('.experiments')
+  const expCircle = document.querySelector('.expCircle')
+
+  setTimeout(() => {
+    isWebActive = true
+    isArtActive = false
+    isExpActive = false
+  }, 10)
+
+  toggleFunction(websites, webCircle, digitalArt, artCircle, experiments, expCircle)
+
+  if (isWebActive == true) {
+    
+
+    hideAlone(websites, webCircle)
+
+    setTimeout(() => {
+      isWebActive = false
+    }, 10)
+  }  
+
+  // console.log('first', isWebActive)
+}
+
+function toggleDigitalArt() {
+  const websites = document.querySelector('.websites')
+  const webCircle = document.querySelector('.webCircle')
+  const digitalArt = document.querySelector('.digital-art')
+  const artCircle = document.querySelector('.artCircle')
+  const experiments = document.querySelector('.experiments')
+  const expCircle = document.querySelector('.expCircle')
+
+  setTimeout(() => {
+    isWebActive = false
+    isArtActive = true
+    isExpActive = false
+  })
+
+  toggleFunction(digitalArt, artCircle, websites, webCircle, experiments, expCircle)
+
+  if (isArtActive == true) {
+    hideAlone(digitalArt, artCircle)
+
+    setTimeout(() => {
+      isArtActive = false
+    })
+  }  
+}
+
+function toggleExperiments() {
+  const websites = document.querySelector('.websites')
+  const webCircle = document.querySelector('.webCircle')
+  const digitalArt = document.querySelector('.digital-art')
+  const artCircle = document.querySelector('.artCircle')
+  const experiments = document.querySelector('.experiments')
+  const expCircle = document.querySelector('.expCircle')
+
+  setTimeout(() => {
+    isWebActive = false
+    isArtActive = false
+    isExpActive = true
+  })
+
+  toggleFunction(experiments, expCircle, digitalArt, artCircle, websites, webCircle)
+
+  if (isExpActive == true) {
+    hideAlone(experiments, expCircle)
+
+    setTimeout(() => {
+      isExpActive = false
+    })
+  }  
+}
+</script>
+
+
+
+<div class="gallery">
+  <div class="websites">
+  <!-- <a class="gallery__media" href="#" target="blank">
+    <img src="/websites/exodusApp.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" href="#" target="blank">
+    <img src="/websites/mentorApp.png" alt="Image">
+  </a> -->
+
+  <a class="gallery__media" title="Imagens Show" href="https://imagens-show.ga/" target="blank">
+    <img src="/websites/imagens.png" alt="Imagens Show">
+  </a>
+
+  <a class="gallery__media" title="Exodus Mockup" href="https://www.figma.com/proto/p2HrfSkQjArlDIUVHvl4Mt/Exodus?page-id=0%3A1&amp;node-id=526%3A4&amp;viewport=241%2C48%2C0.11&amp;scaling=min-zoom&amp;starting-point-node-id=526%3A4" target="blank">
+    <img src="/websites/exodus.png" alt="Exodus Mockup">
+  </a>
+
+  <a class="gallery__media" title="Mentor Space" href="https://mentor.space/" target="blank">
+    <img src="/websites/mentor.png" alt="Mentor Space">
+  </a>
+
+  <a class="gallery__media" title="Grazi" href="https://grazidemantova.com/" target="blank">
+    <img src="/websites/grazi.png" alt="Grazi">
+  </a>
+
+  <a class="gallery__media" title="A Ecuipe" href="https://ecuipe.ga/" target="blank">
+    <img src="/websites/ecuipe.png" alt="A Ecuipe">
+  </a>
+
+  <a class="gallery__media" title="E-Commerce Mockup" href="https://www.figma.com/proto/g9dF8ZqVZn558ri5vnPB5u/Edi-Art?page-id=54%3A207&amp;node-id=54%3A208&amp;viewport=241%2C48%2C0.11&amp;scaling=contain&amp;starting-point-node-id=54%3A208" target="blank">
+    <img src="/websites/edi.png" alt="E-Commerce Mockup">
+  </a>
+
+  <!-- <a class="#" href="https://github.com/VitorPetri" target="blank">
+    More on Github!
+  </a> -->
+</div>
+  <div class="digital-art">
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art1.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art2.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art7.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art4.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art5.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="See on Artstation" href="https://vitorpetri.artstation.com/" target="blank">
+    <img src="/digital-art/art3.png" alt="Image">
+  </a>
+
+  <a class="gallery__media" title="Bidu" href="https://vitorpetri.com/" target="blank">
+    <img src="/digital-art/art9.png" alt="Image">
+  </a>
+
+  <!-- <a class="#" href="https://vitorpetri.artstation.com/" target="blank">
+    More on Artstation!
+  </a> -->
+</div>
+  <div class="experiments">
+  <a class="gallery__media" href="https://fibo-gen.vercel.app/" target="blank">
+    <img src="/experiments/fibo.png" alt="Image">
+  </a>
+
+  <a class="gallery__media">
+    <img src="/experiments/controls.png" alt="Controls">
+  </a>
+
+  <a class="gallery__media" title="Squares" href="https://generative-squares.vercel.app/" target="blank">
+    <img src="/experiments/squares.png" alt="Squares">
+  </a>
+
+  <a class="gallery__media" title="Scroll tuto" href="https://scroll-tuto.vercel.app/" target="blank">
+    <img src="/experiments/scroll.png" alt="Scroll tuto">
+  </a>
+
+  <a class="gallery__media" title="Pao de centeio" href="https://pao-de-centeio.vercel.app/" target="blank">
+    <img src="/experiments/pao.png" alt="Pao de centeio">
+  </a>
+</div>
+</div>
+
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.fog.min.js"></script>
+
+<script>
+  VANTA.FOG({
+    el: "#vanta-canvas",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0x0,
+    midtoneColor: 0xffd1,
+    baseColor: 0x0,
+    blurFactor: 0.90,
+    speed: 2.00,
+    zoom: 0.30
+  })
+</script>
+
+
+</body></html>

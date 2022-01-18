@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Posts</title>
+  
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="../assets/posts.5bfb8916.css">
+
+
+
+
+</head>
+
+<body>
+  <div id="vanta-canvas"></div>
+
+  <main>
+    
+
+<header class="desktop__nav astro-DWEN4DNM">
+  <div class="logo astro-DWEN4DNM">
+    <a href="/" class="astro-DWEN4DNM"><span class="astro-DWEN4DNM">VITOR PETRI</span></a>
+
+   <div class="astro-UWKJA72A">
+  <button class="header__button nav-btn-js astro-UWKJA72A" type="button">
+    <!-- MENU -->
+  </button>
+  <nav class="header__nav nav-js astro-UWKJA72A" data-active="false">
+    <!-- <ul class="header__menu">
+      <li class="header__menu-item"><a href="/">Work</a></li>
+      <li class="header__menu-item"><a href="/posts">Posts</a></li>
+      <li class="header__menu-item"><a href="/about">About</a></li>
+    </ul> -->
+    <p class="astro-UWKJA72A">Very cool features coming soon here :o</p>
+    <!-- <img src="/digital-art/art8.png" alt="Image"> -->
+  </nav>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const revealerNav = window.revealer({
+    revealElementSelector: ".nav-js",
+    options: {
+      anchorSelector: ".nav-btn-js",
+    },
+  });
+
+  const actionBtn = document.querySelector(".nav-btn-js");
+  actionBtn.addEventListener("click", () => {
+    if (!revealerNav.isRevealed()) {
+      revealerNav.reveal();
+      actionBtn.setAttribute("data-open", true);
+    } else {
+      revealerNav.hide();
+      actionBtn.setAttribute("data-open", false);
+    }
+  });
+});
+</script>
+
+
+  </div>
+
+  <nav class="astro-DWEN4DNM">
+    <a href="/" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">WORK</span></a>
+    <a href="/posts" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">POSTS</span></a>
+    <a href="/about" class="hover-this astro-DWEN4DNM"><span class="astro-DWEN4DNM">ABOUT</span></a>
+    <div class="cursor astro-DWEN4DNM"></div>
+  </nav>
+</header>
+
+<script>
+(function () {
+  const link = document.querySelectorAll('nav > .hover-this');
+  const cursor = document.querySelector('.cursor');
+
+  const animateit = function (e) {
+    const span = this.querySelector('span');
+    const { offsetX: x, offsetY: y } = e,
+    { offsetWidth: width, offsetHeight: height } = this,
+
+    move = 25,
+    xMove = x / width * (move * 2) - move,
+    yMove = y / height * (move * 2) - move;
+
+    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+    if (e.type === 'mouseleave') span.style.transform = '';
+  };
+
+  const editCursor = e => {
+    const { clientX: x, clientY: y } = e;
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
+  };
+
+  link.forEach(b => b.addEventListener('mousemove', animateit));
+  link.forEach(b => b.addEventListener('mouseleave', animateit));
+  window.addEventListener('mousemove', editCursor);
+})();
+</script>
+
+
+    <nav class="mobile__nav astro-72ACL2YG">
+  <ul class="astro-72ACL2YG">
+    <li class="astro-72ACL2YG"><a href="/" class="astro-72ACL2YG">WORK</a></li>
+    <li class="astro-72ACL2YG"><a href="/posts" class="astro-72ACL2YG">POSTS</a></li>
+    <li class="astro-72ACL2YG"><a href="/about" class="astro-72ACL2YG">ABOUT</a></li>
+  </ul>
+</nav>
+
+
+    
+    <div class="posts__wrapper astro-3EYSHLEP">
+    <div class="post hideDesktop astro-3EYSHLEP">
+      <br class="astro-3EYSHLEP">
+      <br class="astro-3EYSHLEP">
+      <h3 class="post__title astro-3EYSHLEP">Posts in costrucion</h3>
+      <br class="astro-3EYSHLEP">
+      <p class="astro-3EYSHLEP">
+        Probably for a long time :(  <br class="astro-3EYSHLEP"> If you want, you can reach me out and ask about any topic :)
+      </p>
+    </div>
+
+    <div class="post animate__animated animate__fadeIn hideMobile astro-3EYSHLEP">
+    
+    </div>
+
+    <div class="posts animate__animated animate__fadeIn astro-LFVUKRQF">
+  <a href="/post" class="astro-LFVUKRQF">
+    <small class="astro-LFVUKRQF">Apr 2022</small>
+    <h1 class="astro-LFVUKRQF">Things To Watch</h1>
+  </a>
+  <a href="/post" class="astro-LFVUKRQF">
+    <small class="astro-LFVUKRQF">Fev 2022</small>
+    <h1 class="astro-LFVUKRQF">Fun Websites</h1>
+  </a>
+  <a href="/post" class="astro-LFVUKRQF">
+    <small class="astro-LFVUKRQF">Jan 2022</small>
+    <h1 class="astro-LFVUKRQF">Random Art</h1>
+  </a>
+  <a href="/post" class="astro-LFVUKRQF">
+    <small class="astro-LFVUKRQF">Nov 2021</small>
+    <h1 class="astro-LFVUKRQF">World Beauty</h1>
+  </a>
+  <a href="/post" class="astro-LFVUKRQF">
+    <small class="astro-LFVUKRQF">Out 2021</small>
+    <h1 class="astro-LFVUKRQF">Whisper of the Heart</h1>
+  </a>
+</div>
+
+
+  </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.fog.min.js"></script>
+
+<script>
+  VANTA.FOG({
+    el: "#vanta-canvas",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0x0,
+    midtoneColor: 0xffd1,
+    baseColor: 0x0,
+    blurFactor: 0.90,
+    speed: 2.00,
+    zoom: 0.30
+  })
+</script>
+
+
+</body></html>
