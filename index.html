@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<link rel="stylesheet" href="assets/index.62f196d1.css">
+<link rel="stylesheet" href="assets/index.b1cd18df.css">
 
 
 
@@ -202,7 +202,7 @@ function hide(gallery, button) {
 
   setTimeout(() => {
     gallery.style.opacity = '0'
-    gallery.style.transform = 'translateY(-50%) scale(0)'
+    gallery.style.transform = 'translateY(-54%) scale(0)'
     button.style.backgroundColor = 'transparent'
   })
 }
@@ -210,13 +210,14 @@ function hide(gallery, button) {
 function hideAlone(gallery, button) {
   setTimeout(() => {
     gallery.style.opacity = '0'
-    gallery.style.transform = 'translateY(50%) scale(0)'
+    gallery.style.transform = 'translateY(54%) scale(0)'
     button.style.backgroundColor = 'transparent'
   })
 
   setTimeout(() => {
     gallery.style.display = 'none'
-  }, 300)
+    gallery.style.transform = 'translateY(-54%) scale(0)'
+  }, 350)
 }
 
 function toggleFunction(
@@ -227,6 +228,7 @@ function toggleFunction(
   inactiveTwo,
   inactiveCircleTwo
   ) {
+    
   show(active, activeCircle)
   hide(inactiveOne, inactiveCircleOne)
   hide(inactiveTwo, inactiveCircleTwo)
