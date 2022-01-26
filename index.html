@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<link rel="stylesheet" href="assets/index.b1cd18df.css">
+<link rel="stylesheet" href="assets/index.6a1c1a8c.css">
 
 
 
@@ -192,31 +192,31 @@ function show(gallery, button) {
 
   setTimeout(() => {
     gallery.style.opacity = '1'
-    gallery.style.transform = 'translateY(0) scale(1)'
+    gallery.style.transform = 'translate(0, 0) scale(1)'
     button.style.backgroundColor = '#fff'
   })
 }
 
-function hide(gallery, button) {
+function hide(gallery, button, y) {
   gallery.style.display = 'none'
 
   setTimeout(() => {
     gallery.style.opacity = '0'
-    gallery.style.transform = 'translateY(-54%) scale(0)'
+    gallery.style.transform = `translate(-${y}, -56%) scale(0)`
     button.style.backgroundColor = 'transparent'
   })
 }
 
-function hideAlone(gallery, button) {
+function hideAlone(gallery, button, y) {
   setTimeout(() => {
     gallery.style.opacity = '0'
-    gallery.style.transform = 'translateY(54%) scale(0)'
+    gallery.style.transform = 'translate(0, 0) scale(0)'
     button.style.backgroundColor = 'transparent'
   })
 
   setTimeout(() => {
     gallery.style.display = 'none'
-    gallery.style.transform = 'translateY(-54%) scale(0)'
+    gallery.style.transform = `translate(-${y}, -56%) scale(0)`
   }, 350)
 }
 
@@ -226,12 +226,14 @@ function toggleFunction(
   inactiveOne,
   inactiveCircleOne,
   inactiveTwo,
-  inactiveCircleTwo
+  inactiveCircleTwo,
+  ay,
+  by
   ) {
     
   show(active, activeCircle)
-  hide(inactiveOne, inactiveCircleOne)
-  hide(inactiveTwo, inactiveCircleTwo)
+  hide(inactiveOne, inactiveCircleOne, ay)
+  hide(inactiveTwo, inactiveCircleTwo, by)
 }
 
 let isWebActive = false
@@ -252,19 +254,17 @@ function toggleWebsites() {
     isExpActive = false
   }, 10)
 
-  toggleFunction(websites, webCircle, digitalArt, artCircle, experiments, expCircle)
+  toggleFunction(websites, webCircle, digitalArt, artCircle, experiments, expCircle, '40%', '30%')
 
   if (isWebActive == true) {
     
 
-    hideAlone(websites, webCircle)
+    hideAlone(websites, webCircle, '50%')
 
     setTimeout(() => {
       isWebActive = false
     }, 10)
   }  
-
-  // console.log('first', isWebActive)
 }
 
 function toggleDigitalArt() {
@@ -281,10 +281,10 @@ function toggleDigitalArt() {
     isExpActive = false
   })
 
-  toggleFunction(digitalArt, artCircle, websites, webCircle, experiments, expCircle)
+  toggleFunction(digitalArt, artCircle, websites, webCircle, experiments, expCircle, '50%', '30%')
 
   if (isArtActive == true) {
-    hideAlone(digitalArt, artCircle)
+    hideAlone(digitalArt, artCircle,'40%')
 
     setTimeout(() => {
       isArtActive = false
@@ -306,10 +306,10 @@ function toggleExperiments() {
     isExpActive = true
   })
 
-  toggleFunction(experiments, expCircle, digitalArt, artCircle, websites, webCircle)
+  toggleFunction(experiments, expCircle, digitalArt, artCircle, websites, webCircle, '40%', '50%')
 
   if (isExpActive == true) {
-    hideAlone(experiments, expCircle)
+    hideAlone(experiments, expCircle, '30%')
 
     setTimeout(() => {
       isExpActive = false
