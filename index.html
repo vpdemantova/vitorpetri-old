@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<link rel="stylesheet" href="assets/index.6a1c1a8c.css">
+<link rel="stylesheet" href="assets/index.7a78dc33.css">
 
 
 
@@ -122,22 +122,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     
-    <div class="home__text astro-ZBHKS7OT">
-    <h1 class="home__text__title animate__animated animate__fadeInUp hideMobile astro-ZBHKS7OT">CREATIVE DEVELOPER AND DESIGNER</h1>
+    <div class="home__text astro-VR3O3K2Q">
+    <h1 class="home__text__title animate__animated animate__fadeInUp hideMobile astro-VR3O3K2Q">CREATIVE DEVELOPER AND DESIGNER</h1>
 
-    <div class="home__text__description animate__animated animate__fadeInUp animate__delay-1s hideMobile astro-ZBHKS7OT">
-      <span class="home__text__span astro-ZBHKS7OT">
+    <div class="home__text__description animate__animated animate__fadeInUp animate__delay-1s hideMobile astro-VR3O3K2Q">
+      <span class="home__text__span astro-VR3O3K2Q">
         Hello!
       </span>
 
-      <p class="home__text__paragraph hideMobile astro-ZBHKS7OT">
+      <p class="home__text__paragraph hideMobile astro-VR3O3K2Q">
         Passionate about art, music, and 
         technology. With this site I want 
         to share some of my experiences, ideas 
         and my journey through this world.
       </p>
 
-      <p class="home__text__paragraph hideDesktop astro-ZBHKS7OT">
+      <p class="home__text__paragraph hideDesktop astro-VR3O3K2Q">
         Hello! Passionate about art, music, and 
         technology. With this site I want 
         to share some of my experiences, ideas 
@@ -145,21 +145,21 @@ document.addEventListener("DOMContentLoaded", () => {
       </p>
     </div>
 
-    <h1 class="home__text__title animate__animated animate__fadeIn hideDesktop astro-ZBHKS7OT">CREATIVE DEVELOPER AND DESIGNER</h1>
+    <h1 class="home__text__title animate__animated animate__fadeIn hideDesktop astro-VR3O3K2Q">CREATIVE DEVELOPER AND DESIGNER</h1>
 
-    <div class="home__text__description animate__animated animate__fadeIn hideDesktop astro-ZBHKS7OT">
-      <span class="home__text__span astro-ZBHKS7OT">
+    <div class="home__text__description animate__animated animate__fadeIn hideDesktop astro-VR3O3K2Q">
+      <span class="home__text__span astro-VR3O3K2Q">
         Hello!
       </span>
 
-      <p class="home__text__paragraph hideMobile astro-ZBHKS7OT">
+      <p class="home__text__paragraph hideMobile astro-VR3O3K2Q">
         Passionate about art, music, and 
         technology. With this site I want 
         to share some of my experiences, ideas 
         and my journey through this world.
       </p>
 
-      <p class="home__text__paragraph hideDesktop astro-ZBHKS7OT">
+      <p class="home__text__paragraph hideDesktop astro-VR3O3K2Q">
         Hello! Passionate about art, music, and 
         technology. With this site I want 
         to share some of my experiences, ideas 
@@ -198,16 +198,32 @@ function show(gallery, button) {
 }
 
 function hide(gallery, button, y) {
+  var actualy = '0%'
+
+  if (document.body.clientWidth < 768) {
+    actualy = '-53%'
+  } else {
+    actualy  = '-56%'
+  }
+
   gallery.style.display = 'none'
 
   setTimeout(() => {
     gallery.style.opacity = '0'
-    gallery.style.transform = `translate(-${y}, -56%) scale(0)`
+    gallery.style.transform = `translate(${y}, ${actualy}) scale(0)`
     button.style.backgroundColor = 'transparent'
   })
 }
 
 function hideAlone(gallery, button, y) {
+  var actualyy = '0%'
+
+  if (document.body.clientWidth < 768) {
+    actualyy = '-53%'
+  } else {
+    actualyy  = '-56%'
+  }
+
   setTimeout(() => {
     gallery.style.opacity = '0'
     gallery.style.transform = 'translate(0, 0) scale(0)'
@@ -216,7 +232,7 @@ function hideAlone(gallery, button, y) {
 
   setTimeout(() => {
     gallery.style.display = 'none'
-    gallery.style.transform = `translate(-${y}, -56%) scale(0)`
+    gallery.style.transform = `translate(${y}, ${actualyy}) scale(0)`
   }, 350)
 }
 
@@ -254,12 +270,23 @@ function toggleWebsites() {
     isExpActive = false
   }, 10)
 
-  toggleFunction(websites, webCircle, digitalArt, artCircle, experiments, expCircle, '40%', '30%')
+  var ay = '0%'
+  var ey = '0%'
+
+  if (document.body.clientWidth < 768) {
+    ay = '-15%'
+    ey = '30%'
+  } else {
+    ay = '-40%'
+    ey = '-30%'
+  }
+
+  toggleFunction(websites, webCircle, digitalArt, artCircle, experiments, expCircle, ay, ey)
 
   if (isWebActive == true) {
     
 
-    hideAlone(websites, webCircle, '50%')
+    hideAlone(websites, webCircle, '-50%')
 
     setTimeout(() => {
       isWebActive = false
@@ -281,10 +308,21 @@ function toggleDigitalArt() {
     isExpActive = false
   })
 
-  toggleFunction(digitalArt, artCircle, websites, webCircle, experiments, expCircle, '50%', '30%')
+  var ay = '0%'
+  var ey = '0%'
+
+  if (document.body.clientWidth < 768) {
+    ay = '-15%'
+    ey = '30%'
+  } else {
+    ay = '-40%'
+    ey = '-30%'
+  }
+
+  toggleFunction(digitalArt, artCircle, websites, webCircle, experiments, expCircle, '-50%', ey)
 
   if (isArtActive == true) {
-    hideAlone(digitalArt, artCircle,'40%')
+    hideAlone(digitalArt, artCircle, ay)
 
     setTimeout(() => {
       isArtActive = false
@@ -306,16 +344,28 @@ function toggleExperiments() {
     isExpActive = true
   })
 
-  toggleFunction(experiments, expCircle, digitalArt, artCircle, websites, webCircle, '40%', '50%')
+  var ay = '0%'
+  var ey = '0%'
+
+  if (document.body.clientWidth < 768) {
+    ay = '-15%'
+    ey = '30%'
+  } else {
+    ay = '-40%'
+    ey = '-30%'
+  }
+
+  toggleFunction(experiments, expCircle, digitalArt, artCircle, websites, webCircle, ay, '-50%')
 
   if (isExpActive == true) {
-    hideAlone(experiments, expCircle, '30%')
+    hideAlone(experiments, expCircle, ey)
 
     setTimeout(() => {
       isExpActive = false
     })
   }  
 }
+
 </script>
 
 
